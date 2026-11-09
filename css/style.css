@@ -126,8 +126,76 @@ a {
 
 /* Il menu è già fatto: da 576px le voci al posto dell'icona */
 @media screen and (min-width: 576px) {
-	.left-nav { display: flex; }
-	.bi-list { display: none; }
+	.left-nav {
+		display: flex;
+	}
+
+	.bi-list {
+		display: none;
+	}
 }
 
 /* Da qui in giù scrivi tu: le colonne con Grid e il banner */
+
+
+
+.row {
+	display: grid;
+	gap: 24px;
+}
+
+
+
+/*.row {
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+*/
+
+.card {}
+
+@media screen and (min-width: 676px) {
+
+	.row {
+		grid-template-columns: repeat(2, 1fr);
+
+	}
+
+}
+
+
+
+@media screen and (min-width: 876px) {
+
+	.row {
+		grid-template-columns: repeat(3, 1fr);
+
+	}
+
+}
+
+
+
+
+
+@media screen and (max-width: 875px) {
+	.banner {
+		order: -1
+	}
+
+	.header {
+		order:
+	}
+}
+
+
+@media screen and (min-width: 876px) {
+	.row {
+		grid-area: auto;
+	}
+}
+
+
+.banner {
+	grid-column: 1/-1
+}
